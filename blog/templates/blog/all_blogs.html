@@ -1,0 +1,23 @@
+{% extends 'porfolio/base.html' %}
+
+
+
+
+{% block 'content'%}
+
+
+
+<h1 color=red; >Thomas's Blog.</h1>
+
+
+<h2>Thomas has written {{ data.count  }} blog{{  data.count|pluralize }}</h2>
+{% for i in data %}
+
+
+<a href="{% url 'blog:detail' i.id %}"><h2>{{ i.title }}</h2></a>
+<h5>{{ i.date }}</h5>
+
+<p>{{ i.desc|truncatechars:50 }}</p>
+
+{% endfor %}
+{% endblock %}

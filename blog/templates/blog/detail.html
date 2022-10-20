@@ -1,0 +1,12 @@
+{% extends 'porfolio/base.html' %}
+{% load static %}
+{%  block 'content' %}
+  <h1 style="color: #993300;">{{  blog.title  }}</h1>
+
+  <h2 style="color: #993300;">--{{  blog.date  }}--</h2>
+
+  <p>{{   blog.desc|safe  }}</p>
+
+
+
+  {%  endblock  %}
